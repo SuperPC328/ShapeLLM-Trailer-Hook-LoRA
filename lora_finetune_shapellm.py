@@ -132,8 +132,8 @@ class ShapeLLMLoRATrainer:
             "overwrite_output_dir": True,
 
             # 显存优化配置 (保守设置)
-            "per_device_train_batch_size": 1,  # 最小batch size
-            "gradient_accumulation_steps": 2, # 增加梯度累积保持有效batch size
+            "per_device_train_batch_size": 4,  # 最小batch size
+            "gradient_accumulation_steps": 5, # 增加梯度累积保持有效batch size
             "dataloader_num_workers": 2,       # 减少工作进程
             "dataloader_pin_memory": False,    # 禁用内存固定
             "max_grad_norm": 1.0,              # 梯度裁剪
@@ -141,7 +141,7 @@ class ShapeLLMLoRATrainer:
 
             # 学习率和优化器配置
             "learning_rate": 2e-4,              # 稍微提高学习率
-            "num_train_epochs": 10.0,            # 增加训练轮数
+            "num_train_epochs": 20.0,            # 增加训练轮数
             "lr_scheduler_type": "cosine",
             "warmup_ratio": 0.1,
             "weight_decay": 0.01,

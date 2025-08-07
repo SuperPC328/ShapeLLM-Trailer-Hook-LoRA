@@ -14,14 +14,14 @@ logging_steps: 5
 save_steps: 100
 plot_loss: true
 overwrite_output_dir: true
-per_device_train_batch_size: 1
-gradient_accumulation_steps: 2
+per_device_train_batch_size: 4
+gradient_accumulation_steps: 5
 dataloader_num_workers: 2
 dataloader_pin_memory: false
 max_grad_norm: 1.0
 gradient_checkpointing: true
 learning_rate: 0.0002
-num_train_epochs: 10.0
+num_train_epochs: 20.0
 lr_scheduler_type: 'cosine'
 warmup_ratio: 0.1
 weight_decay: 0.01
