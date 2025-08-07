@@ -285,9 +285,9 @@ class TrailerHookPreprocessor:
             templates = random.sample(self.text_to_3d_templates, 6)
             for template in templates:
                 if template.endswith(":"):
-                    prompt = f"{template} a trailer hitch with {hook_data['description']}"
+                    prompt = f"{template} a trailer_hitch with {hook_data['description']}"
                 else:
-                    prompt = f"{template} a trailer hitch with {hook_data['description']}"
+                    prompt = f"{template} a trailer_hitch with {hook_data['description']}"
 
                 training_data.append({
                     "conversations": [

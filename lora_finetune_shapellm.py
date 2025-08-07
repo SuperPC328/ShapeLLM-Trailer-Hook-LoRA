@@ -94,7 +94,7 @@ class ShapeLLMLoRATrainer:
                 "file_name": data_filename,
                 "formatting": "sharegpt",
                 "columns": {
-                    "messages": "messages"
+                    "messages": "conversations"
                 }
             }
         }
@@ -133,7 +133,7 @@ class ShapeLLMLoRATrainer:
 
             # 显存优化配置 (保守设置)
             "per_device_train_batch_size": 1,  # 最小batch size
-            "gradient_accumulation_steps": 4, # 增加梯度累积保持有效batch size
+            "gradient_accumulation_steps": 2, # 增加梯度累积保持有效batch size
             "dataloader_num_workers": 2,       # 减少工作进程
             "dataloader_pin_memory": False,    # 禁用内存固定
             "max_grad_norm": 1.0,              # 梯度裁剪
